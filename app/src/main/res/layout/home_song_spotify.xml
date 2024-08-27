@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/clHomeSpotify"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <ImageButton
+        android:id="@+id/ib_ampliar"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_margin="16dp"
+        android:background="#00FFFFFF"
+        android:src="@drawable/ic_ampliar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_infolista"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_margin="200dp"
+        android:gravity="center"
+        android:text="REPRODUCIENDO DESDE TU BIBLIOTECA\nTus Me Gusta"
+        app:layout_constraintBottom_toBottomOf="@id/ib_ampliar"
+        app:layout_constraintEnd_toStartOf="@id/ib_menu"
+        app:layout_constraintStart_toEndOf="@id/ib_ampliar"
+        app:layout_constraintTop_toTopOf="@id/ib_ampliar" />
+
+    <ImageButton
+        android:id="@+id/ib_menu"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_margin="16dp"
+        android:background="#00FFFFFF"
+        android:padding="6dp"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toBottomOf="@id/tv_infolista"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_infolista"
+        app:srcCompat="@drawable/ic_menu" />
+
+    <ImageView
+        android:id="@+id/iv_fondo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginVertical="40dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="40dp"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ib_ampliar"
+        app:srcCompat="@drawable/ic_fondo_song" />
+
+    <TextView
+        android:id="@+id/tv_infoSong"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Vine A Buscarte\nFonseca"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@+id/iv_fondo"
+        app:layout_constraintTop_toBottomOf="@+id/iv_fondo" />
+
+    <ImageButton
+        android:id="@+id/ib_like"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#00FFFFFF"
+        android:padding="6dp"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toBottomOf="@id/tv_infoSong"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="@id/iv_fondo"
+        app:layout_constraintTop_toTopOf="@id/tv_infoSong"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/ic_like" />
+
+    <ImageButton
+        android:id="@+id/ib_barra"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:background="#00FFFFFF"
+        android:scaleType="fitXY"
+        app:layout_constraintStart_toStartOf="@+id/tv_infoSong"
+        app:layout_constraintTop_toBottomOf="@+id/tv_infoSong"
+        app:srcCompat="@drawable/ic_barra" />
+
+    <TextView
+        android:id="@+id/tv_timeStartSong"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0:00"
+        app:layout_constraintStart_toStartOf="@+id/tv_infoSong"
+        app:layout_constraintTop_toBottomOf="@+id/ib_barra" />
+
+    <TextView
+        android:id="@+id/tv_timeEndSong"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="3:30"
+        app:layout_constraintEnd_toEndOf="@id/ib_like"
+        app:layout_constraintTop_toBottomOf="@+id/ib_barra" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:divider="@drawable/empty_divider"
+        android:orientation="horizontal"
+        android:showDividers="middle"
+        app:layout_constraintEnd_toEndOf="@id/iv_fondo"
+        app:layout_constraintStart_toStartOf="@+id/tv_infoSong"
+        app:layout_constraintTop_toBottomOf="@+id/tv_timeStartSong">
+
+        <ImageButton
+            android:id="@+id/ib_aleatorio"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:background="#00FFFFFF"
+            app:srcCompat="@drawable/ic_aleatorio" />
+
+        <ImageButton
+            android:id="@+id/ib_previous"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:background="#00FFFFFF"
+            app:srcCompat="@drawable/ic_previous" />
+
+        <ImageButton
+            android:id="@+id/ib_play"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:background="#00FFFFFF"
+            app:srcCompat="@drawable/ic_play" />
+
+        <ImageButton
+            android:id="@+id/ib_next"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:background="#00FFFFFF"
+            app:srcCompat="@drawable/ic_next" />
+
+        <ImageButton
+            android:id="@+id/ib_repetir"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:background="#00FFFFFF"
+            app:srcCompat="@drawable/ic_repetir" />
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/ib_muldisp"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="80dp"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintStart_toStartOf="@+id/tv_timeStartSong"
+        app:layout_constraintTop_toBottomOf="@+id/tv_timeStartSong"
+        app:srcCompat="@drawable/ic_mdisp" />
+
+    <ImageButton
+        android:id="@+id/ib_listrep"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="#00FFFFFF"
+        app:layout_constraintBottom_toBottomOf="@id/ib_muldisp"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="@id/ib_like"
+        app:srcCompat="@drawable/ic_lista_rep" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
