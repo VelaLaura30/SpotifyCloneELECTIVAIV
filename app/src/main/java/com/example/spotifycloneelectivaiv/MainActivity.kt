@@ -8,7 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var ll_songs: LinearLayout
+    private lateinit var llSongs: LinearLayout
     private val songList = arrayListOf<SongHome>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -33,11 +33,11 @@ class MainActivity : AppCompatActivity() {
             val songView = layoutInflater.inflate(R.layout.home_song_spotify, null)
             val tvInfoSong: TextView = songView.findViewById(R.id.tv_infoSong)
             tvInfoSong.text = song.songName
-            ll_songs.addView(songView)
+            llSongs.addView(songView)
         }
     }
 
     private fun initViews() {
-        ll_songs = findViewById(R.id.ll_songs)
+        llSongs = findViewById(R.id.ll_ListSong)
     }
 }
