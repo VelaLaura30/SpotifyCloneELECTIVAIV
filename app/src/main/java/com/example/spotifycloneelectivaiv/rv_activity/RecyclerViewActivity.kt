@@ -21,7 +21,7 @@ class RecyclerViewActivity : AppCompatActivity() {
     }
 
     private fun initViews() {
-        rvSongs = findViewById(R.id.rv_songs)
+        rvSongs = findViewById(R.id.rv_Song)
         rvSongs.apply {
             layoutManager = LinearLayoutManager(this@RecyclerViewActivity, LinearLayoutManager.VERTICAL, false)
             adapter = RVAdapterSongs(songList)
