@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">SpotifyCloneELECTIVAIV</string>
+    <string name="infoListaReproduccion">REPRODUCIENDO DESDE TU BIBLIOTECA\nTus Me Gusta</string>
+    <string name="infoSong">Vine A Buscarte\nFonseca</string>
+    <string name="InicioCancion">0:00</string>
+    <string name="FinalCancion">3:30</string>
+    <string name="obtenerCanciones">Obtener\ncanciones</string>
+    <string name="borrarCancion">Borrar\ncancion</string>
+    <string name="modificarCancion">Modificar\ncancion</string>
+    <string name="rv_activity">RV Activity</string>
 </resources>

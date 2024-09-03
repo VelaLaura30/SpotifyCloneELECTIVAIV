@@ -22,7 +22,7 @@
         android:layout_height="40dp"
         android:layout_margin="200dp"
         android:gravity="center"
-        android:text="REPRODUCIENDO DESDE TU BIBLIOTECA\nTus Me Gusta"
+        android:text="@string/infoListaReproduccion"
         app:layout_constraintBottom_toBottomOf="@id/ib_ampliar"
         app:layout_constraintEnd_toStartOf="@id/ib_menu"
         app:layout_constraintStart_toEndOf="@id/ib_ampliar"
@@ -61,7 +61,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
-        android:text="Vine A Buscarte\nFonseca"
+        android:text="@string/infoSong"
         android:textSize="15sp"
         app:layout_constraintStart_toStartOf="@+id/iv_fondo"
         app:layout_constraintTop_toBottomOf="@+id/iv_fondo" />
@@ -97,7 +97,7 @@
         android:id="@+id/tv_timeStartSong"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="0:00"
+        android:text="@string/InicioCancion"
         app:layout_constraintStart_toStartOf="@+id/tv_infoSong"
         app:layout_constraintTop_toBottomOf="@+id/ib_barra" />
 
@@ -105,7 +105,7 @@
         android:id="@+id/tv_timeEndSong"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="3:30"
+        android:text="@string/FinalCancion"
         app:layout_constraintEnd_toEndOf="@id/ib_like"
         app:layout_constraintTop_toBottomOf="@+id/ib_barra" />
 

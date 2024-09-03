@@ -1,19 +1,25 @@
 package com.example.spotifycloneelectivaiv
 
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import com.example.spotifycloneelectivaiv.databinding.ActivityMainBinding
+import com.example.spotifycloneelectivaiv.rv_activity.RecyclerViewActivity
 
 class MainActivity : AppCompatActivity() {
 
+    private lateinit var bindingSpotify: ActivityMainBinding
     private lateinit var llSongs: LinearLayout
     private val songList = arrayListOf<SongHome>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        bindingSpotify = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(bindingSpotify.root)
         initViews()
         fillSongList()
         addSongsToLL()
@@ -39,5 +45,8 @@ class MainActivity : AppCompatActivity() {
 
     private fun initViews() {
         llSongs = findViewById(R.id.ll_ListSong)
+        findViewById<Button>(R.id.btn_rv).setOnClickListener {
+            startActivity(Intent(this, RecyclerViewActivity::class.java))
+        }
     }
 }
