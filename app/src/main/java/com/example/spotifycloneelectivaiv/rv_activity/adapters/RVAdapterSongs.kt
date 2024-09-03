@@ -1,28 +1,28 @@
 package com.example.spotifycloneelectivaiv.rv_activity.adapters
 
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.spotifycloneelectivaiv.R
 import com.example.spotifycloneelectivaiv.SongHome
+import com.example.spotifycloneelectivaiv.databinding.HomeSongSpotifyBinding
 
 class RVAdapterSongs(private var songs: List<SongHome>) : RecyclerView.Adapter<RVAdapterSongs.SongViewHolder>() {
 
-    class SongViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        val tvSongName: TextView = view.findViewById(R.id.tv_infoSong)
+    class SongViewHolder(val binding: HomeSongSpotifyBinding) : RecyclerView.ViewHolder(binding.root) {
+        fun bind(song: SongHome) {
+            binding.tvInfoSong.text = song.songName
+        }
     }
-    
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SongViewHolder {
-        val songView = LayoutInflater.from(parent.context)
-            .inflate(R.layout.home_song_spotify, parent, false)
-        return SongViewHolder(songView)
+        val binding = HomeSongSpotifyBinding.inflate(
+            LayoutInflater.from(parent.context), parent, false
+        )
+        return SongViewHolder(binding)
     }
 
     override fun onBindViewHolder(holder: SongViewHolder, position: Int) {
-        holder.tvSongName.text = songs[position].songName
+        holder.bind(songs[position])
     }
 
     override fun getItemCount(): Int = songs.size
@@ -31,6 +31,4 @@ class RVAdapterSongs(private var songs: List<SongHome>) : RecyclerView.Adapter<R
         this.songs = newSongs
         notifyDataSetChanged()
     }
-
 }
-

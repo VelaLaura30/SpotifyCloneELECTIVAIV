@@ -70,14 +70,17 @@
         android:id="@+id/ib_like"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:layout_marginStart="100dp"
         android:background="#00FFFFFF"
         android:padding="6dp"
         android:scaleType="centerInside"
         app:layout_constraintBottom_toBottomOf="@id/tv_infoSong"
         app:layout_constraintDimensionRatio="1:1"
         app:layout_constraintEnd_toEndOf="@id/iv_fondo"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/tv_infoSong"
         app:layout_constraintTop_toTopOf="@id/tv_infoSong"
-        app:layout_constraintVertical_bias="1.0"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/ic_like" />
 
     <ImageButton
